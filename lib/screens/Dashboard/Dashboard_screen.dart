@@ -99,64 +99,67 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          HeadingSix(
-              headingSix: "Portfolio",
-              heaingSize: 28,
-              headingColor: Constant.comTxtDark,
-              headingWeight: FontWeight.w500),
-          SizedBox(height: 32),
-          HeadingSix(
-              headingSix: "\£ 8,603.87",
-              heaingSize: 28,
-              headingColor: Constant.comTxtDark,
-              headingWeight: FontWeight.w500),
-          SizedBox(height: 4),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(Icons.north_east, color: Constant.comTxtGreen, size: 16),
-              HeadingSix(
-                  headingSix: "Up by \£633.80",
-                  heaingSize: 14,
-                  headingColor: Constant.comTxtGreen,
-                  headingWeight: FontWeight.w500),
-              HeadingSix(
-                  headingSix: " Since you began investing",
-                  heaingSize: 14,
-                  headingColor: Constant.comTxtdull,
-                  headingWeight: FontWeight.w500),
-            ],
-          ),
-          SizedBox(height: 32),
-          HeadingSix(
-              headingSix: "Graph",
-              heaingSize: 16,
-              headingColor: Constant.comTxtDark,
-              headingWeight: FontWeight.w500),
-          SizedBox(height: 120),
-          HeadingSix(
-              headingSix: "Inverstments",
-              heaingSize: 18,
-              headingColor: Constant.comTxtDark,
-              headingWeight: FontWeight.w500),
-          SizedBox(height: 18),
-          Container(
-              child: ListView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            scrollDirection: Axis.vertical,
-            padding: EdgeInsets.symmetric(horizontal: 8),
-            itemCount: companies.length,
-            itemBuilder: (context, index) {
-              final listOfCom = companies[index];
-              return ListOfCompanies(listOfCom);
-            },
-          )),
-        ]);
+    return Container(
+      padding: EdgeInsets.only(left: 12, right: 12),
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            HeadingSix(
+                headingSix: "Portfolio",
+                heaingSize: 28,
+                headingColor: Constant.comTxtDark,
+                headingWeight: FontWeight.w500),
+            SizedBox(height: 32),
+            HeadingSix(
+                headingSix: "\£ 8,603.87",
+                heaingSize: 28,
+                headingColor: Constant.comTxtDark,
+                headingWeight: FontWeight.w500),
+            SizedBox(height: 4),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(Icons.north_east, color: Constant.comTxtGreen, size: 16),
+                HeadingSix(
+                    headingSix: "Up by \£633.80",
+                    heaingSize: 14,
+                    headingColor: Constant.comTxtGreen,
+                    headingWeight: FontWeight.w500),
+                HeadingSix(
+                    headingSix: " Since you began investing",
+                    heaingSize: 14,
+                    headingColor: Constant.comTxtdull,
+                    headingWeight: FontWeight.w500),
+              ],
+            ),
+            SizedBox(height: 32),
+            HeadingSix(
+                headingSix: "Graph",
+                heaingSize: 16,
+                headingColor: Constant.comTxtDark,
+                headingWeight: FontWeight.w500),
+            SizedBox(height: 120),
+            HeadingSix(
+                headingSix: "Inverstments",
+                heaingSize: 18,
+                headingColor: Constant.comTxtDark,
+                headingWeight: FontWeight.w500),
+            SizedBox(height: 18),
+            Container(
+                child: ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              padding: EdgeInsets.symmetric(horizontal: 8),
+              itemCount: companies.length,
+              itemBuilder: (context, index) {
+                final listOfCom = companies[index];
+                return ListOfCompanies(listOfCom);
+              },
+            )),
+          ]),
+    );
   }
 }

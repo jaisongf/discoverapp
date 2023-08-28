@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../config/constant.dart';
 import '../../widgets/common-textfield.dart';
 import '../../widgets/heading_six.dart';
+import '../detailPage/detail.dart';
 
 class PortfolioScreen extends StatefulWidget {
   PortfolioScreen({Key? key}) : super(key: key);
@@ -91,24 +92,35 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
     }
   ];
   Widget ListOfCompanies(Map<String, String> companies) {
-    return Container(
-      width: 100,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          CircleAvatar(
-              radius: 30, backgroundImage: AssetImage(companies['img']!)),
-          SizedBox(height: 6),
-          Text(companies['head']!,
-              style: TextStyle(color: Constant.comTxtDark, fontSize: 15)),
-          SizedBox(height: 6),
-          Text(companies['subHead']!,
-              style: TextStyle(color: Constant.comTxtDark, fontSize: 15)),
-          SizedBox(height: 6),
-          Text(companies['des']!,
-              style: TextStyle(color: Constant.comTxtdull, fontSize: 14)),
-        ],
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+          primary: Colors.transparent, padding: EdgeInsets.all(0)),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DetailsPage()),
+        );
+      },
+      child: Container(
+        color: Colors.white,
+        width: 100,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            CircleAvatar(
+                radius: 30, backgroundImage: AssetImage(companies['img']!)),
+            SizedBox(height: 6),
+            Text(companies['head']!,
+                style: TextStyle(color: Constant.comTxtDark, fontSize: 15)),
+            SizedBox(height: 6),
+            Text(companies['subHead']!,
+                style: TextStyle(color: Constant.comTxtDark, fontSize: 15)),
+            SizedBox(height: 6),
+            Text(companies['des']!,
+                style: TextStyle(color: Constant.comTxtdull, fontSize: 14)),
+          ],
+        ),
       ),
     );
   }
