@@ -20,6 +20,7 @@ class HeadingSix extends StatelessWidget {
               fontWeight: headingWeight,
               fontSize: heaingSize,
               color: headingColor,
+              height: 1.5,
             ));
   }
 }

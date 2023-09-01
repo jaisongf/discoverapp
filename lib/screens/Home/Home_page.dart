@@ -3,9 +3,9 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../config/constant.dart';
 import '../Dashboard/Dashboard_screen.dart';
-import '../Portfolio/Portfolio_screen.dart';
-import '../Profile/Profile_screen.dart';
-import '../Universe/Universe_screen.dart';
+import '../Search/Search_screen.dart';
+import '../Account/Account_screen.dart';
+import '../Activity/Activity_screen.dart';
 
 List<BottomNavigationBarItem> bottomNavItems = const <BottomNavigationBarItem>[
   BottomNavigationBarItem(icon: Icon(Icons.home), label: "Portfolio"),
@@ -16,16 +16,31 @@ List<BottomNavigationBarItem> bottomNavItems = const <BottomNavigationBarItem>[
 ];
 
 List<Widget> bottomNavScreen = <Widget>[
-  PortfolioScreen(),
-  UniverseScreen(),
-  ProfileScreen(),
+  SearchScreen(),
+  ActivityScreen(),
+  AccountScreen(),
 ];
 const List<String> appBarTitles = [
-  "Portfolio0",
+  "Portfolio",
   "Search",
   "Activity",
   "Account"
 ];
+
+IconData _getIconForTitle(String title) {
+  switch (title) {
+    case "Portfolio":
+      return Icons.account_circle; // Replace with the actual icon you want
+    case "Search":
+      return Icons.manage_search;
+    case "Activity":
+      return Icons.manage_search; // Replace with the actual icon you want
+    case "Account":
+      return Icons.logout;
+    default:
+      return Icons.error;
+  }
+}
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -63,7 +78,11 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             ],
           ),
-          actions: [IconButton(onPressed: null, icon: Icon(Icons.search))]),
+          actions: [
+            IconButton(
+                onPressed: null,
+                icon: Icon(_getIconForTitle(appBarTitles[_currentIndex])))
+          ]),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.only(left: 16, right: 16),
@@ -73,9 +92,9 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 // SizedBox(height: 48.0),
                 if (_currentIndex == 0) DashboardScreen(),
-                if (_currentIndex == 1) PortfolioScreen(),
-                if (_currentIndex == 2) UniverseScreen(),
-                if (_currentIndex == 3) ProfileScreen(),
+                if (_currentIndex == 1) SearchScreen(),
+                if (_currentIndex == 2) ActivityScreen(),
+                if (_currentIndex == 3) AccountScreen(),
               ]),
         ),
       ),

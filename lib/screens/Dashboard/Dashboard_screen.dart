@@ -14,25 +14,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
   final List<Map<String, String>> companies = [
     {
       'head': 'SONIA',
-      'subHead': 'Tracker',
+      'subHead': '£CINE * 2565 Shares',
       'des': 'XSTR',
       'img': '../../assets/fr2-3.PNG'
     },
     {
       'head': 'Pound',
-      'subHead': 'Overnight...',
+      'subHead': 'CINE * 2456 Shares',
       'des': 'CSH2',
       'img': '../../assets/fr3-2.PNG'
     },
     {
       'head': 'Short',
-      'subHead': 'Term Bon...',
+      'subHead': '£CINE * 2565 Shares',
       'des': 'MINT',
       'img': '../../assets/fr2-2.PNG'
     },
     {
       'head': 'Fed Rac',
-      'subHead': 'Tracker',
+      'subHead': '£CINE * 2565 Shares',
       'des': 'FEDG',
       'img': '../../assets/fr2-4.PNG'
     }
@@ -65,7 +65,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           SizedBox(height: 3),
                           Text(companies['subHead']!,
                               style: TextStyle(
-                                  color: Constant.comTxtdull, fontSize: 15)),
+                                  color: Constant.comTxtdull, fontSize: 13)),
                         ],
                       ),
                       Column(

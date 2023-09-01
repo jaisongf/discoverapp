@@ -4,29 +4,107 @@ import '../../config/constant.dart';
 import '../../widgets/border_bottom.dart';
 import '../../widgets/common-textfield.dart';
 import '../../widgets/common_button.dart';
+import '../../widgets/coomon_label.dart';
 import '../../widgets/heading_six.dart';
 
-class ProfileScreen extends StatefulWidget {
-  ProfileScreen({Key? key}) : super(key: key);
+class AccountScreen extends StatefulWidget {
+  AccountScreen({Key? key}) : super(key: key);
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<AccountScreen> createState() => _AccountScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        CircleAvatar(
+          backgroundColor: Colors.grey.shade400,
+          foregroundColor: Constant.bgWhite,
+          child: const Text('VS'),
+        ),
         Center(
           child: HeadingSix(
-              headingSix: "Account",
-              heaingSize: 28,
+              headingSix: "Veera Srinivasulu",
+              heaingSize: 24,
               headingColor: Constant.comTxtDark,
               headingWeight: FontWeight.w500),
         ),
-        SizedBox(height: 20),
-        BorderBottom(bordeSize: 5, bottomColor: Constant.comTxtdullDu),
+        SizedBox(height: 8),
+        Center(
+          child: Container(
+            margin: EdgeInsets.only(left: 60, right: 60),
+            child: CommonLabel(
+                name: 'Freetrade user #143430',
+                fontSize: 14.0,
+                fontColor: Colors.white,
+                bgColor: Color(0xFFF8628D),
+                labelRadiusBig: 20,
+                labelRadiusSmall: 20,
+                paddingTop: 4,
+                paddingBottom: 4),
+          ),
+        ),
+        SizedBox(height: 8),
+        Center(
+          child: Container(
+            width: 100,
+            margin: EdgeInsets.only(left: 60, right: 60),
+            child: CommonLabel(
+                name: 'Standard',
+                fontSize: 14.0,
+                fontColor: Colors.white,
+                bgColor: Color(0xFFF8628D),
+                labelRadiusBig: 20,
+                labelRadiusSmall: 20,
+                paddingTop: 4,
+                paddingBottom: 4),
+          ),
+        ),
+        SizedBox(height: 16),
+        Align(
+          alignment: Alignment.bottomLeft,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              HeadingSix(
+                  headingSix: "Address",
+                  heaingSize: 15,
+                  headingColor: Colors.grey.shade400,
+                  headingWeight: FontWeight.w500),
+              SizedBox(height: 4),
+              Container(
+                width: 200,
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      HeadingSix(
+                          headingSix:
+                              "112 Gemini Park Manor Way Borehamwood WD6 1BZ Hertfordshire",
+                          heaingSize: 14,
+                          headingColor: Constant.drakGC,
+                          headingWeight: FontWeight.w500),
+                    ]),
+              ),
+              SizedBox(height: 16),
+              HeadingSix(
+                  headingSix: "Email",
+                  heaingSize: 15,
+                  headingColor: Colors.grey.shade400,
+                  headingWeight: FontWeight.w500),
+              SizedBox(height: 4),
+              HeadingSix(
+                  headingSix: "veerasn@gmail.com",
+                  heaingSize: 14,
+                  headingColor: Constant.drakGC,
+                  headingWeight: FontWeight.w500),
+            ],
+          ),
+        ),
+        // BorderBottom(bordeSize: 5, bottomColor: Constant.comTxtdullDu),
         SizedBox(height: 32),
         Container(
           child: Column(

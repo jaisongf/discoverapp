@@ -204,7 +204,7 @@ class Constant {
   static FontWeight? textFormFieldSizeFontW = FontWeight.normal;
   static Color? textFormFocuBorCol = Color(0xFF2D2F3E);
   static double? textFormFocuBorWid = 1;
-  static Color? textFormEnaBorCol = Color(0xFF2D2F3E);
+  static Color? textFormEnaBorCol = Color(0xFF2D2F3E70);
   static Color? textFormBG = Color(0xFF26273950);
   static double? textFormEnaBorWid = 1;
   static double? textFormborderRadiusTL = 15;
