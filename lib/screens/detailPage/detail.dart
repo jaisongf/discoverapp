@@ -16,6 +16,7 @@ class _DetailsPageState extends State<DetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.black),
           // automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -83,34 +84,49 @@ class _DetailsPageState extends State<DetailsPage> {
               ],
             ),
             SizedBox(height: 24),
-            Text("graph"),
-            SizedBox(height: 48),
+            Container(
+                height: 180,
+                child: HeadingSix(
+                  headingSix: "Graph",
+                  heaingSize: 16,
+                  headingColor: Constant.comTxtDark,
+                  headingWeight: FontWeight.w500,
+                )),
+            SizedBox(height: 24),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CommonButton(
-                  buttonName: "Sell",
-                  buttonColor: Constant.comTxtdullDu13,
-                  buttonNameColor: Constant.comTxt4,
-                  buttonHeight: 54,
-                  buttonRadiusTL: 40.0,
-                  buttonRadiusBL: 40.0,
-                  buttonBorder: Colors.transparent,
-                  buttonFunction: () {
-                    Navigator.pop(context);
-                  },
+                Container(
+                  width: 200,
+                  child: CommonButton(
+                    buttonName: "Sell",
+                    buttonColor: Constant.comTxtdullDu13,
+                    buttonNameColor: Constant.comTxt4,
+                    buttonHeight: 54,
+                    buttonRadiusTL: 40.0,
+                    buttonRadiusBL: 40.0,
+                    buttonBorder: Colors.transparent,
+                    buttonFunction: () {
+                      Navigator.pop(context);
+                    },
+                  ),
                 ),
                 SizedBox(width: 24),
-                CommonButton(
-                  buttonName: "Buy",
-                  buttonColor: Constant.comTxt4,
-                  buttonNameColor: Constant.comTxtdullDu13,
-                  buttonHeight: 54,
-                  buttonRadiusTL: 40.0,
-                  buttonRadiusBL: 40.0,
-                  buttonBorder: Colors.transparent,
-                  buttonFunction: () {
-                    Navigator.pop(context);
-                  },
+                Container(
+                  width: 180,
+                  child: CommonButton(
+                    buttonName: "Buy",
+                    buttonColor: Constant.comTxt4,
+                    buttonNameColor: Constant.comTxtdullDu13,
+                    buttonHeight: 54,
+                    buttonRadiusTL: 40.0,
+                    buttonRadiusBL: 40.0,
+                    buttonBorder: Colors.transparent,
+                    buttonFunction: () {
+                      Navigator.pop(context);
+                    },
+                  ),
                 ),
               ],
             ),

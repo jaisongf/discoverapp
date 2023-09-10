@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../config/constant.dart';
+import '../../widgets/coomon_label.dart';
 import '../../widgets/heading_six.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -105,12 +106,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HeadingSix(
-                headingSix: "Portfolio",
-                heaingSize: 28,
-                headingColor: Constant.comTxtDark,
-                headingWeight: FontWeight.w500),
-            SizedBox(height: 32),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                HeadingSix(
+                    headingSix: "Portfolio",
+                    heaingSize: 28,
+                    headingColor: Constant.comTxtDark,
+                    headingWeight: FontWeight.w500),
+                CommonLabel(
+                    bgColor: Color(0xFF4E84FF),
+                    name: "Free Share",
+                    fontColor: Colors.white,
+                    labelRadiusSmall: 9,
+                    icondata: Icons.currency_pound,
+                    iconColor: Colors.white,
+                    iconSize: 16),
+              ],
+            ),
+            SizedBox(height: 24),
             HeadingSix(
                 headingSix: "\£ 8,603.87",
                 heaingSize: 28,
@@ -134,13 +148,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     headingWeight: FontWeight.w500),
               ],
             ),
-            SizedBox(height: 32),
-            HeadingSix(
-                headingSix: "Graph",
-                heaingSize: 16,
-                headingColor: Constant.comTxtDark,
-                headingWeight: FontWeight.w500),
-            SizedBox(height: 120),
+            SizedBox(height: 24),
+            Container(
+                height: 240,
+                child: HeadingSix(
+                  headingSix: "Graph",
+                  heaingSize: 16,
+                  headingColor: Constant.comTxtDark,
+                  headingWeight: FontWeight.w500,
+                )),
+            SizedBox(height: 24),
             HeadingSix(
                 headingSix: "Inverstments",
                 heaingSize: 18,

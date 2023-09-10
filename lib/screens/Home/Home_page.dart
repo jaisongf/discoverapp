@@ -8,7 +8,10 @@ import '../Account/Account_screen.dart';
 import '../Activity/Activity_screen.dart';
 
 List<BottomNavigationBarItem> bottomNavItems = const <BottomNavigationBarItem>[
-  BottomNavigationBarItem(icon: Icon(Icons.home), label: "Portfolio"),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.home),
+    label: "Portfolio",
+  ),
   BottomNavigationBarItem(icon: Icon(Icons.manage_search), label: "Search"),
   BottomNavigationBarItem(icon: Icon(Icons.air), label: "Activity"),
   BottomNavigationBarItem(
@@ -81,7 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: [
             IconButton(
                 onPressed: null,
-                icon: Icon(_getIconForTitle(appBarTitles[_currentIndex])))
+                icon: Icon(
+                  _getIconForTitle(appBarTitles[_currentIndex]),
+                  color: Color(0xFF000000),
+                ))
           ]),
       body: SingleChildScrollView(
         child: Container(

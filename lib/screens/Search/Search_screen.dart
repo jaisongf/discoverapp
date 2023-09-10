@@ -228,6 +228,12 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ),
           const SizedBox(height: 18.0),
+          HeadingSix(
+              headingSix: "Header",
+              heaingSize: 18,
+              headingColor: Constant.comTxtDark,
+              headingWeight: FontWeight.w500),
+          const SizedBox(height: 18.0),
           Container(
             height: 120,
             child: ListView.builder(

@@ -21,11 +21,11 @@ class Constant {
 
   static Color? comTxtDark = const Color(0xFF000000);
   static Color? comTxtdull = const Color(0xFFADADB0);
-  static Color? comTxtPink = const Color(0xFFD67396);
+  static Color? comTxtPink = const Color(0xFF4E84FF);
   static Color? comTxtdullDu = const Color(0xFFE1E1E4);
   static Color? comTxtdullDu11 = const Color(0xFFF2F2F2);
   static Color? comTxtdullDu12 = const Color(0xFFEEEEEE);
-  static Color? comTxtdullDu13 = const Color(0xFFF8F8FA);
+  static Color? comTxtdullDu13 = const Color(0xFFE5D9FA);
   static Color? comTxt4 = const Color(0xFF7931F5);
   static Color? comTxtGreen = const Color(0xFF37C88D);
 
